@@ -1,0 +1,239 @@
+{
+ "name": "frieren",
+ "sprite": [
+  "...aaaaa....aaaaa..",
+  "..awhhhsa..auuuuua.",
+  ".awhhhhhsaauuuuuuua",
+  "ahfffhfffaaufffffua",
+  "ehfffffffaaufqfqfua",
+  "rhfffffffa.affmffa.",
+  "ahaffmffah..afffa..",
+  "hsaogggoasqaogggoaq",
+  "saoaoooaoaqoaoooaoq",
+  "safaogoafaqfaogoafq",
+  "a.aoooooa.qqaoooaqq",
+  ".aoooooooaqqaoaoaqq",
+  ".aggggggga.abbabba.",
+  "..abbabba..abbabba.",
+  ".aakkakkaaaakkakkaa"
+ ],
+ "palette": {
+  "a": "#4a4f63",
+  "w": "#ffffff",
+  "h": "#e4e7f0",
+  "s": "#aab0c6",
+  "f": "#ffe3d0",
+  "e": "#f0bfa3",
+  "r": "#d23b3b",
+  "m": "#c97a6a",
+  "o": "#f4f1e8",
+  "g": "#d9a63a",
+  "v": "#8a6bc0",
+  "n": "#5b8f3a",
+  "l": "#8cc95a",
+  "t": "#ffd84a",
+  "p": "#ff9ec4",
+  "c": "#8a5a2c",
+  "k": "#5a3a1a",
+  "x": "#9aa0b0",
+  "y": "#6b7080",
+  "b": "#3a3550",
+  "u": "#5b8fd6",
+  "q": "#2d4f8f",
+  "i": "#cfd6e0"
+ },
+ "outline": "a",
+ "eyeColor": "#2e9e6b",
+ "eyes": [
+  [
+   2,
+   4
+  ],
+  [
+   6,
+   4
+  ]
+ ],
+ "cheeks": [
+  [
+   3,
+   6
+  ],
+  [
+   7,
+   6
+  ]
+ ],
+ "miniSprite": [
+  ".vvv.",
+  "vfffv",
+  "vfffv",
+  ".ooo.",
+  ".a.a."
+ ],
+ "lines": {
+  "idle": [
+   "collecting useless spells",
+   "it's only been a decade",
+   "hm."
+  ],
+  "sleep": [
+   "zzz… five more decades"
+  ],
+  "think": [
+   "that's just a short while",
+   "recalling a spell from 80 years ago"
+  ],
+  "read": [
+   "studying grimoire {}",
+   "reading old magic"
+  ],
+  "search": [
+   "searching for \"{}\"",
+   "looking for a grimoire"
+  ],
+  "edit": [
+   "casting a spell on {}",
+   "rewriting the formula"
+  ],
+  "bash": [
+   "Zoltraak: {}",
+   "casting…"
+  ],
+  "web": [
+   "scrying {}",
+   "sensing mana far away"
+  ],
+  "agent": [
+   "Fern, Stark — your turn",
+   "sending the apprentices"
+  ],
+  "cheer": [
+   "a field of flowers ✿",
+   "Himmel would've liked this"
+  ],
+  "error": [
+   "…a Mimic. Again.",
+   "it bit me"
+  ]
+ },
+ "lineColors": {
+  "idle": "#f4ecff",
+  "run": "#f4ecff",
+  "jump": "#f4ecff",
+  "agent": "#f4ecff",
+  "read": "#f4ecff",
+  "search": "#f4ecff",
+  "edit": "#f4ecff",
+  "bash": "#f4ecff",
+  "web": "#f4ecff",
+  "think": "#f4ecff",
+  "sleep": "#e8dcff",
+  "cheer": "#fff6ff",
+  "error": "#ffd3ee"
+ },
+ "hud": {
+  "frame": "#c9a24a",
+  "hp": {
+   "label": "♥ HP",
+   "color": "#c97a6a",
+   "fill": [
+    "#8a3a3a",
+    "#ff9e9e"
+   ]
+  },
+  "mp": {
+   "label": "✦ MANA",
+   "color": "#5a8fd0",
+   "fill": [
+    "#2a4a8a",
+    "#9fd0ff"
+   ]
+  }
+ },
+ "scene": {
+  "ground": [
+   "nlnnnlnnnnlnnlnn",
+   "nnnnnnnlnnnnnnnn"
+  ],
+  "sky": [
+   "...tttt...",
+   "..tttttt..",
+   ".tttttttt.",
+   ".tttttttt.",
+   "..tttttt..",
+   "...tttt..."
+  ],
+  "obstacles": [
+   [
+    "cccccc",
+    "ckkkkc",
+    "cgggcc",
+    "cckccc",
+    "cccccc"
+   ],
+   [
+    "..xx..",
+    ".xxxy.",
+    "xxxxyy",
+    "xxyyyy"
+   ],
+   [
+    ".nn.",
+    "nnnn",
+    "nnnn",
+    ".kk.",
+    ".kk."
+   ]
+  ],
+  "decor": [
+   [
+    ".p.",
+    "ptp",
+    ".p.",
+    ".n."
+   ],
+   [
+    "hhh.hh",
+    "hhhhhh",
+    ".hhhh.",
+    "......",
+    "......",
+    "......",
+    "......",
+    "......",
+    "......",
+    "......",
+    "......",
+    "......",
+    "......"
+   ],
+   [
+    "........i.",
+    "....xx..i.",
+    "...xxxx.i.",
+    "...xyyx.x.",
+    "...xxxx.x.",
+    "..xxxxxxx.",
+    ".xxxxxxx..",
+    ".xxxxxxx..",
+    ".xxyxxxx..",
+    "..xx.xx...",
+    "..xx.xx...",
+    ".yyyyyyy..",
+    ".xxxxxxx..",
+    "yyyyyyyyy."
+   ],
+   [
+    ".v.",
+    "vtv",
+    ".v.",
+    ".n."
+   ]
+  ],
+  "every": 48
+ },
+ "scale": 0.8,
+ "art": "art/frieren-staff.svg",
+ "backdrop": "art/forest-backdrop.svg"
+}
