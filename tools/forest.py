@@ -4,7 +4,7 @@ import base64, math, os, random
 
 random.seed(5)
 os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
-W, H = 1600, 200
+W, H = 1600, 150
 SW, SH = 250, 232  # the strip's size (build.sh crops it)
 TW = round(SW * H / SH)  # one tile at the band's height
 b = base64.b64encode(open('build/forest/strip-s.jpg', 'rb').read()).decode()
@@ -22,7 +22,7 @@ pace = '.p0{animation-duration:1.1s}.p1{animation-duration:1.45s}.p2{animation-d
 rays = []
 for i in range(10):
     x = random.uniform(0, W); w = random.uniform(40, 90)
-    rays.append(f'<polygon class="r d{random.randrange(DELAYS)}" points="{x:.0f},-10 {x+w:.0f},-10 {x+w-136:.0f},{H+10} {x-136-w*0.4:.0f},{H+10}"/>')
+    rays.append(f'<polygon class="r d{random.randrange(DELAYS)}" points="{x:.0f},-10 {x+w:.0f},-10 {x+w-102:.0f},{H+10} {x-102-w*0.4:.0f},{H+10}"/>')
 
 def pf(id, c1, c2):
     r = lambda x, y, c: f'<rect x="{x}" y="{y}" width="1" height="1" fill="{c}"/>'
@@ -31,7 +31,7 @@ def pf(id, c1, c2):
 
 flowers = []
 # (count, y from, y to, size from, size to): back row to front row, in band px.
-for n, ymin, ymax, kmin, kmax in [(55, 128, 140, 3, 4), (58, 142, 154, 4, 5), (56, 152, 164, 4, 6), (60, 164, 180, 5, 7)]:
+for n, ymin, ymax, kmin, kmax in [(55, 96, 105, 2, 3), (58, 107, 116, 3, 4), (56, 114, 123, 3, 4), (60, 123, 135, 4, 5)]:
     for i in range(n):
         x = i * W / n + random.uniform(-12, 12); y = random.uniform(ymin, ymax); k = random.randint(kmin, kmax)
         # The CSS animation sets `transform`, so the place and size go on a wrapping <g>.
@@ -41,7 +41,7 @@ for n, ymin, ymax, kmin, kmax in [(55, 128, 140, 3, 4), (58, 142, 154, 4, 5), (5
 
 motes = []
 for i in range(60):
-    x = random.uniform(0, W); y = random.uniform(80, H - 6); s = random.choice([3, 4, 4])
+    x = random.uniform(0, W); y = random.uniform(60, H - 5); s = random.choice([3, 3, 4])
     motes.append(f'<rect class="m d{random.randrange(DELAYS)}" x="{x:.0f}" y="{y:.0f}" width="{s}" height="{s}"/>')
 
 svg = f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 {W} {H}">
@@ -54,7 +54,7 @@ svg = f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org
     {phase}{pace}
     @keyframes bd-ray {{ 0% {{ transform: translateX(-180px); opacity: 0.2; }} 50% {{ opacity: 1; }} 100% {{ transform: translateX(180px); opacity: 0.3; }} }}
     @keyframes bd-sway {{ from {{ transform: rotate(-16deg) translateX(-1px); }} to {{ transform: rotate(16deg) translateX(1px); }} }}
-    @keyframes bd-mote {{ 0% {{ transform: translate(0, 0); opacity: 0; }} 15% {{ opacity: 1; }} 100% {{ transform: translate(34px, -136px); opacity: 0; }} }}
+    @keyframes bd-mote {{ 0% {{ transform: translate(0, 0); opacity: 0; }} 15% {{ opacity: 1; }} 100% {{ transform: translate(26px, -102px); opacity: 0; }} }}
   </style>
   <defs>
     <image id="t" href="data:image/jpeg;base64,{b}" width="{TW}" height="{H}" preserveAspectRatio="none" style="image-rendering: pixelated"/>
