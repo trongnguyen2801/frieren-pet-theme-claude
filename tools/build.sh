@@ -18,6 +18,6 @@ swift $T/cutout.swift sources/frieren-himmel-sleep.jpg $B/sleep
 python3 $T/wrap.py $B/sleep art/frieren-himmel-sleep.svg 340
 
 # Forest band: trunks and grass from the left of the picture, mirror tiled, with light, flowers and motes on top.
-swift $T/crop.swift sources/forest.jpg $B/forest/strip.jpg 0 140 250 160
+swift $T/crop.swift sources/forest.jpg $B/forest/strip.jpg 0 70 250 232
 sips -Z 250 -s formatOptions 62 $B/forest/strip.jpg --out $B/forest/strip-s.jpg >/dev/null
 python3 $T/forest.py
