@@ -35,7 +35,9 @@ for n, ymin, ymax, kmin, kmax in [(55, 128, 140, 3, 4), (58, 142, 154, 4, 5), (5
     for i in range(n):
         x = i * W / n + random.uniform(-12, 12); y = random.uniform(ymin, ymax); k = random.randint(kmin, kmax)
         # The CSS animation sets `transform`, so the place and size go on a wrapping <g>.
-        flowers.append(f'<g transform="translate({x:.0f} {y:.0f}) scale({k})"><use class="f d{random.randrange(DELAYS)} p{random.randrange(3)}" href="#{random.choice("abc")}"/></g>')
+        # Every other flower sways; the rest stand still, which halves what the desktop repaints each frame.
+        sway = f' class="f d{random.randrange(DELAYS)} p{random.randrange(3)}"' if i % 2 == 0 else ''
+        flowers.append(f'<g transform="translate({x:.0f} {y:.0f}) scale({k})"><use{sway} href="#{random.choice("abc")}"/></g>')
 
 motes = []
 for i in range(60):
@@ -46,7 +48,7 @@ svg = f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org
   <!-- Forest band from Chocobrewcoffee's pixel art (personal use, see CREDITS.md), canopy, trunks and grass tiled, with
        moving light, four rows of swaying pixel flowers and rising motes. Animations take the custom property t as their delay. -->
   <style>
-    .r {{ fill: url(#bd-rayg); animation: bd-ray 6s ease-in-out infinite alternate; mix-blend-mode: screen; }}
+    .r {{ fill: url(#bd-rayg); animation: bd-ray 6s ease-in-out infinite alternate; }}
     .f {{ transform-box: fill-box; transform-origin: 50% 100%; animation: bd-sway 1.5s ease-in-out infinite alternate; }}
     .m {{ fill: #fbffd8; animation: bd-mote 4.5s linear infinite; opacity: 0; }}
     {phase}{pace}
