@@ -30,5 +30,5 @@ The theme sticks across sessions on that machine. To go back to the slime, ask f
 ## Limits
 
 The desktop draws one SVG of at most 131072 characters for the band: backdrop plus picture plus status line.
-`frieren-staff.svg` with `forest-backdrop.svg` comes to about 120000. The sleeping picture is too big to share the band,
+`frieren-staff.svg` with `forest-backdrop.svg` comes to about 108000. The sleeping picture is too big to share the band,
 which is why the three-picture theme has no backdrop.
